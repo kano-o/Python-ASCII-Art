@@ -21,6 +21,13 @@ for h in range(hgt):
 print('Pixel matrix size:', len(pixel_matrix), 'x', len(pixel_matrix[0]))
 print('Iterating through pixel contents:')
 
+brightness_matrix = [[0 for y in range(hgt)] for x in range(wdh)] 
+
+for h in range(hgt):
+    for w in range(wdh):
+        r, g, b = pixel_matrix[w][h]
+        brightness = (r + g + b) / 3
+        pixel_matrix[w][h] = round(brightness)
 
 for x in range(len(pixel_matrix)):
     for y in range(len(pixel_matrix[x])):
