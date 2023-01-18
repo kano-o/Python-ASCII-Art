@@ -3,6 +3,7 @@ from PIL import Image
 picture_name = 'typing-man-typing.gif'
 im = Image.open(picture_name)
 
+#im = im.resize((320, 320))
 
 print('Successfully loaded image!')
 
@@ -51,6 +52,5 @@ for x in range(len(pixel_matrix)):
         pixel = pixel_matrix[x][y]
         output += pixel
               
-open(picture_name + '.txt', 'x')
 with open(picture_name + '.txt', 'w') as text_file:
     text_file.write(output)
